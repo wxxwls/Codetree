@@ -1,22 +1,9 @@
 a, b = map(int, input().split())
-cnt=0
-def tsn(n):
-    global cnt
-    if (n//10)==3:
-        cnt+=1
-    elif (n%10)==3:
-        cnt+=1
-    elif (n//10)==6:
-        cnt+=1
-    elif (n%10)==6:
-        cnt+=1
-    elif (n//10)==9:
-        cnt+=1
-    elif (n%10)==9:
-        cnt+=1
-    elif (n%3)==0:
-        cnt+=1
+cnt = 0
 
-for i in range(a,b+1):
-    tsn(i)
+for i in range(a, b + 1):
+    s = str(i)
+    if (('3' in s) or ('6' in s) or ('9' in s)) or (i % 3 == 0):
+        cnt += 1
+
 print(cnt)
